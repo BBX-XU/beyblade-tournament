@@ -5,7 +5,7 @@ RUN apk add --no-cache libc6-compat python3 make g++
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
-RUN npm ci --omit=optional
+RUN RUN npm install
 
 COPY . .
 
