@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# 生产环境下，启动服务
+# 从 dist/ 根目录执行，确保 process.cwd() 与 dev 模式一致
+NODE_ENV=production node server/main.js
