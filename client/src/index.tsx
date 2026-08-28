@@ -9,7 +9,7 @@ import { ErrorRender } from '@lark-apaas/client-toolkit/components/ErrorRender';
 import RoutesComponent from './app.tsx';
 import './index.css';
 import { createPortal } from 'react-dom';
-import { Toaster } from '@client/src/components/ui/sonner';
+import { Toaster } from '@client/components/ui/sonner';
 
 const CLIENT_BASE_PATH = process.env.CLIENT_BASE_PATH || '/';
 
