@@ -4,7 +4,24 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   root: 'client',
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'virtual-modules',
+      resolveId(id) {
+        if (id === 'virtual:capabilities') {
+          return id;
+        }
+        return null;
+      },
+      load(id) {
+        if (id === 'virtual:capabilities') {
+          return 'export default {};';
+        }
+        return null;
+      },
+    },
+  ],
   resolve: {
     alias: {
       '@client/src': path.resolve(__dirname, 'client/src'),
