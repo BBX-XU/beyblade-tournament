@@ -7,10 +7,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'client/src'),
-      '@client': path.resolve(__dirname, 'client/src'),
       '@client/src': path.resolve(__dirname, 'client/src'),
       '@/src': path.resolve(__dirname, 'client/src'),
+      '@client': path.resolve(__dirname, 'client/src'),
+      '@': path.resolve(__dirname, 'client/src'),
       '@shared': path.resolve(__dirname, 'shared'),
     },
   },
