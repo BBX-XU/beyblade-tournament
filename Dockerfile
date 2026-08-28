@@ -1,4 +1,4 @@
-FROM node:22-alpine AS base
+FROM registry.cn-hangzhou.aliyuncs.com/library/node:22-alpine AS base
 RUN apk add --no-cache libc6-compat python3 make g++
 WORKDIR /app
 COPY package.json ./
@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build:server
 RUN npm run build:client
 
-FROM node:22-alpine AS runner
+FROM registry.cn-hangzhou.aliyuncs.com/library/node:22-alpine AS runner
 RUN apk add --no-cache libc6-compat curl
 WORKDIR /app
 ENV NODE_ENV=production
