@@ -10,8 +10,8 @@
     "build:prod": "npm run build:server && npm run build:client",
     "build:server": "NODE_ENV=production nest build",
     "build:client": "NODE_ENV=production vite build --config vite.config.ts",
-    "start": "NODE_ENV=production node dist/server/main.js",
-    "start:prod": "NODE_ENV=production node dist/server/main.js"
+    "start": "NODE_ENV=production node dist/server/server/main.js",
+    "start:prod": "NODE_ENV=production node dist/server/server/main.js"
   },
   "dependencies": {
     "@lark-apaas/fullstack-nestjs-core": "^1.1.60",
